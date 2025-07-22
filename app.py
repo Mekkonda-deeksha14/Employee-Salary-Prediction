@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 # Load dataset
 @st.cache_data
 def load_data():
-    df = pd.read_csv("ds_salaries_sample.csv")
+    df = pd.read_csv("ds_salaries.csv")
     return df
 
 df = load_data()
