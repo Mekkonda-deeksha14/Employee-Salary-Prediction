@@ -61,4 +61,11 @@ input_df = pd.DataFrame([{
 }])
 predicted_salary = model.predict(input_df)[0]
 
+# Convert to INR (Assuming 1 USD = 83.0 INR)
+usd_to_inr = 83.0
+salary_in_inr = predicted_salary * usd_to_inr
+
+# Show both USD and INR
 st.success(f"💰 Estimated Salary: **${predicted_salary:,.2f} USD**")
+st.info(f"🇮🇳 Equivalent Salary: **₹{salary_in_inr:,.0f} INR**")
+
